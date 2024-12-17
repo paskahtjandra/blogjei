@@ -1,0 +1,41 @@
+/**
+ * @copyright 2024 paskahtjandra
+ * @license Apache-2.0
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-zinc-50 text-zinc-900 h-[200vh];
+}
+
+/* Menu Button */
+.menu-btn {
+  @apply w-10 h-10 grid place-items-center md:hidden text-black hover:text-[#ff3131] transition-colors duration-300 active:scale-90;
+}
+
+.navbar {
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-500/10 rounded-2xl ring-inset ring-1 ring-zinc-500/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter]
+}
+
+.navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible
+}
+
+.nav-link {
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-black hover:text-[#ff3131] transition-colors
+}
+
+.nav-link.active{
+  @apply text-[#ff3131] duration-500
+}
+
+.navbar .active-box {
+  @apply absolute bg-white rounded-lg -z-10 transition-[top,left] duration-500 
+}
